@@ -1,0 +1,21 @@
+herbolaria(plantas_medicinales).
+clientes(juan).
+clientes(pedro).
+plantas_medicinales(manzanilla).
+plantas_medicinales(opio).
+plantas_medicinales(coca).
+plantas_medicinales(albaca).
+plantas_medicinales(arnica).
+dosis(manzanilla,10).
+dosis(opio,2).
+dosis(coca,4).
+formas_uso(cocimiento,manzanilla).
+formas_uso(infusion,opio).
+formas_uso(jarabe,coca).
+formas_uso(maceracion,arnica).
+cocimiento(manzanilla).
+infusion(albaca).
+beneficio(no_toxico,plantas_medicinales).
+beneficio(más_barato,plantas_medicinales).
+cura(artritis,arnica).
+recetar(C,P,D,F) :- clientes(C),dosis(P,D),formas_uso(F,P).
